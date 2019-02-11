@@ -4,6 +4,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+
 var app = express();
 
 app.set('view engine','hbs');
@@ -64,6 +66,6 @@ app.get('/about.html/home',(req,res,err)=>{
 	});
 }); 
 
-app.listen(8080,()=>{
-	console.log('server listening to port 8080');
+app.listen(port,()=>{
+	console.log(`server listening to port ${port}`);
 });
